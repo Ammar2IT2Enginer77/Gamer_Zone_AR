@@ -40,6 +40,10 @@ document.addEventListener('DOMContentLoaded', function () {
   // 2. Interactive Hero Scroll-Driven Product Showcase (index.html)
   const showcaseStage = document.querySelector('#gzShowcaseStage');
   if (showcaseStage) {
+    const isMobile = window.innerWidth <= 820;
+    const prodX = isMobile ? '50%' : '27%';
+    const prodY = isMobile ? '23%' : '52%';
+
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: '#gzShowcaseStage',
@@ -51,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
 
-    // Stage 1: Fade out intro text, zoom watermark, move Product 1 to left & reveal Card 1
+    // Stage 1: Fade out intro text, zoom watermark, move Product 1 & reveal Card 1
     tl.to('.gz-intro-layer', {
       opacity: 0,
       y: -50,
@@ -64,12 +68,12 @@ document.addEventListener('DOMContentLoaded', function () {
       duration: 1
     }, 0)
     .to('#gzProd1', {
-      left: '27%',
-      top: '52%',
+      left: prodX,
+      top: prodY,
       xPercent: -50,
       yPercent: -50,
       rotation: -14,
-      scale: 1.15,
+      scale: isMobile ? 0.95 : 1.15,
       duration: 0.85,
       ease: 'power2.inOut'
     }, 0)
@@ -116,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 1.35)
     .fromTo('#gzProd2',
       {
-        left: '27%',
+        left: prodX,
         top: '125%',
         xPercent: -50,
         yPercent: -50,
@@ -125,12 +129,12 @@ document.addEventListener('DOMContentLoaded', function () {
         rotation: 15
       },
       {
-        left: '27%',
-        top: '52%',
+        left: prodX,
+        top: prodY,
         xPercent: -50,
         yPercent: -50,
         opacity: 1,
-        scale: 1.15,
+        scale: isMobile ? 0.95 : 1.15,
         rotation: -10,
         duration: 0.85,
         ease: 'power2.out'
