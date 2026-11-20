@@ -1126,44 +1126,38 @@ html.lenis, html.lenis body {
 }
 
 @media (max-width: 820px) {
-  .gz-floating-product {
-    width: 155px;
-    height: 155px;
-    margin-top: -135px;
-  }
-
   .gz-details-inner {
-    height: 100%;
-    align-items: flex-end;
-    padding-bottom: 24px;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    height: 100% !important;
+    padding: 0 14px 22px !important;
   }
 
   .gz-showcase-card,
   .gz-card-right,
   .gz-card-left {
     position: relative !important;
+    inset: auto !important;
     right: auto !important;
     left: auto !important;
     top: auto !important;
+    bottom: auto !important;
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 auto !important;
     padding: 18px !important;
+    translate: none !important;
   }
 
-  .gz-showcase-card h2 {
-    font-size: 20px;
-    margin-bottom: 6px;
-  }
-
-  .gz-showcase-card p {
-    font-size: 14px;
-    margin-bottom: 12px;
-    line-height: 1.5;
-  }
-
-  .gz-card-price {
-    font-size: 20px;
+  .gz-floating-product {
+    width: 145px !important;
+    height: 145px !important;
+    top: 26% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    margin: 0 !important;
   }
 }
 }
