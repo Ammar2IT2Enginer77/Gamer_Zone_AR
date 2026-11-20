@@ -1129,7 +1129,7 @@ html.lenis, html.lenis body {
   .gz-floating-product {
     width: 155px;
     height: 155px;
-    margin-top: -125px;
+    margin-top: -135px;
   }
 
   .gz-details-inner {
@@ -1138,14 +1138,17 @@ html.lenis, html.lenis body {
     padding-bottom: 24px;
   }
 
-  .gz-showcase-card {
-    position: relative;
-    right: auto;
-    left: auto;
-    top: auto;
-    width: 100%;
-    max-width: 100%;
-    padding: 18px;
+  .gz-showcase-card,
+  .gz-card-right,
+  .gz-card-left {
+    position: relative !important;
+    right: auto !important;
+    left: auto !important;
+    top: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding: 18px !important;
   }
 
   .gz-showcase-card h2 {
